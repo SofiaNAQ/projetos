@@ -1,2 +1,2 @@
-# HTML's
-Pasta com algumas páginas desenvolvidas usando HTML e CSS.
+# Projetos de estudo
+Pasta com algumas páginas desenvolvidas usando HTML, CSS, JS e, talvez, PHP.
