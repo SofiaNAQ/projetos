@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Poppins';
+    background: #fff;
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    text-align: center;
+    margin: 100px 0;
+    color: #fff;
+}
+
+.container-timer{
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1rem;
+}
+
+.container-timer .time-item{
+    border-radius: 10px;
+    text-align: center;
+}
+
+.time:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: hsl(236, 16%, 20%);
+    border-radius: 10px 10px 0 0;
+    z-index: -1;
+}
+
+.container-timer .time-item .time{
+    background-color: hsl(236, 21%, 26%);
+    box-shadow: 0px 8px 17px 2px rgba(0,0,0,0.14) , 
+    0px 3px 14px 2px rgba(0,0,0,0.12) , 
+    0px 5px 5px -3px rgba(0,0,0,0.2) ;
+    padding: 20px 50px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 3;
+}
+
+.container-timer .time-item .time span{
+    font-size: 5rem;
+    font-weight: bold;
+    color: hsl(345, 95%, 68%);
+    z-index: 9999;
+}
+
+.container-timer .time-item > span{
+    display: block;
+    margin: 20px 0;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 7px;
+}

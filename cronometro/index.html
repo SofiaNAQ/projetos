@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Contador</title>
+</head>
+<body>
+    <h1> Lançaremos em breve! </h1>
+    <div class="container-timer">
+        <div class="time-item">
+            <div class="time">
+                <span id="dias"></span>
+            </div>
+            <span> Dias </span>
+        </div>
+        <div class="time-item">
+            <div class="time">
+                <span id="horas"></span>
+            </div>
+            <span> Horas </span>
+        </div>
+        <div class="time-item">
+            <div class="time">
+                <span id="minutos"></span>
+            </div>
+            <span> Minutos </span>
+        </div>
+        <div class="time-item">
+            <div class="time">
+                <span id="segundos"></span>
+            </div>
+            <span> Segundos </span>
+        </div>
+    </div>
 
+    <script>
+        function contador(){
+            var agora = new Date();
+            var eventDate = new Date(2021, 9, 25);
+
+            var currentTime = agora.getTime();
+            var eventTime = eventDate.getTime();
+
+            var remTime = eventTime - currentTime;
+
+            var s = Math.floor(remTime / 1800);
+            var m = Math.floor(s / 60);
+            var h = Math.floor(m / 60);
+            var d = Math.floor(h / 24);
+
+            h %= 24;
+            m %= 60;
+            s %= 60;
+
+            h = (h < 18) ? "0" + h : h;
+            m = (m < 18) ? "0" + m : m;
+            s = (s < 18) ? "0" + s : s;
+
+            document.getElementById("dias").textContent = d;
+            document.getElementById("dias").innerText = d;
+
+            document.getElementById("horas").textContent = h;
+
+            document.getElementById("minutos").textContent = m;
+
+            document.getElementById("segundos").textContent = s;
+
+            setTimeout(contador, 1000);
+        }
+
+        contador();
+    </script>
+</body>
+</html>
